@@ -23,7 +23,7 @@ echo "Creando VPC..."
 AWS_ID_VPC=$(aws ec2 create-vpc \
   --cidr-block $AWS_VPC_CIDR_BLOCK \
   --amazon-provided-ipv6-cidr-block \
-  --tag-specification ResourceType=vpc,Tags=[{Key=Name,Value=SRINN-vpc}] \
+  --tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=SRINN-vpc}] \
   --query 'Vpc.{VpcId:VpcId}' \
   --output text)
 
